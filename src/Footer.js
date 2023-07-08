@@ -25,7 +25,7 @@ export default function Footer(props) {
       <img
         src={contact}
         alt="contact"
-        style={{ objectFit: "cover", width: "100%" }}
+        style={{ objectFit: "cover", width: "100%", maxWidth: 520 }}
       />
       <br />
       <div className="txt-letter-05">Thông tin liên hệ</div>
@@ -74,7 +74,7 @@ export default function Footer(props) {
       <img
         src={footer}
         alt="footer"
-        style={{ objectFit: "cover", width: "100%" }}
+        style={{ objectFit: "cover", width: "100%", maxWidth: 520 }}
       />
     </div>
   );

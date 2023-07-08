@@ -22,7 +22,7 @@ const MyContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <MyContext.Provider value={{ store, setStore }}>
+    <MyContext.Provider value={{ store, setStore, _setStore }}>
       {!store?.isLoading ? (
         children
       ) : (

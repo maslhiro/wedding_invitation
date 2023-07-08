@@ -1,35 +1,38 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useCallback, useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import cover from "./assets/cover.gif";
 import { PRIMARY_COLOR } from "./assets";
 import { MyContext } from "./store";
 
 export default function Cover(props) {
-  const { store, setStore } = useContext(MyContext);
+  const { store, setStore, _setStore } = useContext(MyContext);
   const refView = useRef(null);
 
   const { height } = store || {};
 
-  const handleResize = useCallback(() => {
-    setStore({
-      height: window?.innerHeight,
-      width: refView.current.offsetWidth,
-    });
-  }, [refView?.current]);
-
   useEffect(() => {
-    window.addEventListener("load", handleResize);
+    const handleResize = () => {
+      setStore({
+        height: window?.innerHeight,
+      });
+    };
+
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.addEventListener("load", handleResize);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
-    setStore({
-      width: refView.current.offsetWidth,
+    _setStore((_store) => {
+      if (_store?.width > refView?.current?.offsetWidth) {
+        return _store;
+      }
+      return {
+        ..._store,
+        width: refView.current?.offsetWidth || _store?.width,
+      };
     });
   }, [refView?.current]);
 

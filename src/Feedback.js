@@ -24,7 +24,7 @@ export default function Feedback(props) {
       <img
         src={feedback}
         alt="feedback"
-        style={{ objectFit: "cover", width: "100%" }}
+        style={{ objectFit: "cover", width: "100%", maxWidth: 520 }}
       />
       <br />
       <div className="txt-letter-05">Thông tin phản hồi</div>

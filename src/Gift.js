@@ -26,7 +26,7 @@ export default function Gift(props) {
       <img
         src={gift}
         alt="gift"
-        style={{ objectFit: "cover", width: "100%" }}
+        style={{ objectFit: "cover", width: "100%", maxWidth: 520 }}
       />
       <br />
       <div className="txt-letter-05">Gửi lời chúc đến đôi uyên ương</div>
