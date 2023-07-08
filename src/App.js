@@ -1,17 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
-import Cover from "./Cover";
-
 import "./App.css";
-import Letter from "./Letter";
-import { MyContext, MyContextProvider } from "./store";
+
+import React from "react";
+import Cover from "./Cover";
+import Letter01 from "./Letter01";
+import Letter02 from "./Letter02";
+
+import { MyContextProvider } from "./store";
 
 function App() {
   return (
     <MyContextProvider>
       <div className="App">
         <Cover />
-        <Letter />
-      </div>{" "}
+        <Letter01 />
+        <Letter02 />
+      </div>
     </MyContextProvider>
   );
 }

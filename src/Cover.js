@@ -62,17 +62,3 @@ export default function Cover(props) {
     </div>
   );
 }
-
-const styles = {
-  container: {},
-  coverTitle: {
-    fontFamily: '"Baloo 2", cursive',
-    fontWeight: "bold",
-    fontSize: "50px",
-    lineHeight: "50px",
-    color: "#FDD65D",
-  },
-  imageStyles: {
-    objectFit: "cover",
-  },
-};
