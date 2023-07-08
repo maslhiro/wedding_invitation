@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect, useRef } from "react";
 import cover from "./assets/cover.gif";
+import { PRIMARY_COLOR } from "./assets";
+import { MyContext } from "./store";
 
-const PRIMARY_COLOR = "#9b1f21";
-export default function Cover() {
-  const [windowSize, setWindowSize] = useState(window);
+export default function Cover(props) {
+  const { store, setStore } = useContext(MyContext);
+  const refView = useRef(null);
+
+  const { height } = store || {};
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowSize(window);
+      setStore({ height: window?.innerHeight });
     };
 
     window.addEventListener("resize", handleResize);
@@ -17,15 +22,23 @@ export default function Cover() {
     };
   }, []);
 
-  const { innerHeight: windowHeight } = windowSize || {};
+  useEffect(() => {
+    setStore({
+      width: refView.current.offsetWidth,
+    });
+  }, []);
 
   return (
     <div
       style={{
-        height: windowHeight,
+        minHeight: height,
+        maxHeight: height,
+        height,
         display: "flex",
         flexDirection: "column",
+        flex: 1,
       }}
+      ref={refView}
     >
       <div
         style={{
@@ -37,13 +50,15 @@ export default function Cover() {
           flexDirection: "column",
         }}
       >
-        <span style={styles.coverTitle}>NHỰT VINH</span>
+        <span className="title-cover">NHỰT VINH</span>
         <br />
-        <span style={styles.coverTitle}>HỒNG HẠNH</span>
+        <span className="title-cover">HỒNG HẠNH</span>
         <br />
-        <span style={styles.coverTitle}>15.07.2023</span>
+        <span className="title-cover">15.07.2023</span>
       </div>
-      <img src={cover} alt="GIF" style={{ maxWidth: 520, width: "100%" }} />
+      <div style={{ backgroundColor: PRIMARY_COLOR }}>
+        <img src={cover} alt="GIF" style={{ maxWidth: 520, width: "100%" }} />
+      </div>
     </div>
   );
 }
