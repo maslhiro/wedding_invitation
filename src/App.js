@@ -7,6 +7,9 @@ import Letter01 from "./Letter01";
 import Letter02 from "./Letter02";
 
 import { MyContextProvider } from "./store";
+import Feedback from "./Feedback";
+import Gift from "./Gift";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Cover />
         <Letter01 />
         <Letter02 />
+        <Feedback />
+        <Gift />
+        <Footer />
       </div>
       <Analytics />
     </MyContextProvider>

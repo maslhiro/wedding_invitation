@@ -51,7 +51,7 @@ export default function Letter02(props) {
             // backgroundColor: "blue",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
           }}
         >
           <div className="txt-letter-02">
@@ -123,18 +123,26 @@ export default function Letter02(props) {
               </div>
             </div>
           </div>
-        </div>
-        <div
-          style={{
-            flex: 1,
-            display: "flex",
-          }}
-        >
+          <br />
           <div className="txt-letter-01">
             Sự hiện diện của Quý Khách
             <br />
             là niềm vinh dự cho gia đình chúng tôi.
           </div>
+          <br />
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            backgroundColor: "red",
+          }}
+        >
+          {/* <div className="txt-letter-01">
+            Sự hiện diện của Quý Khách
+            <br />
+            là niềm vinh dự cho gia đình chúng tôi.
+          </div> */}
         </div>
       </div>
     </Letter>
