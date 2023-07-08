@@ -1,4 +1,5 @@
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import React from "react";
 import Cover from "./Cover";
@@ -15,6 +16,7 @@ function App() {
         <Letter01 />
         <Letter02 />
       </div>
+      <Analytics />
     </MyContextProvider>
   );
 }
