@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useRef } from "react";
 import cover from "./assets/cover.gif";
 import { PRIMARY_COLOR } from "./assets";
 import { MyContext } from "./store";
@@ -24,21 +24,33 @@ export default function Cover(props) {
     };
   }, []);
 
-  useEffect(() => {
-    _setStore((_store) => {
-      if (_store?.width > refView?.current?.offsetWidth) {
-        return _store;
+  useLayoutEffect(() => {
+    if (!refView.current) return;
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect) {
+          const _width = entry.contentRect?.width;
+          if (_width) {
+            _setStore((_store) => {
+              if (!_width && _store?.width >= _width) {
+                return _store;
+              }
+              return {
+                ..._store,
+                width: _width,
+              };
+            });
+            break;
+          }
+        }
       }
-      return {
-        ..._store,
-        width: refView.current?.offsetWidth || _store?.width,
-      };
     });
-  }, [refView?.current]);
+    resizeObserver.observe(refView.current);
+    return () => resizeObserver.disconnect();
+  }, []);
 
   return (
     <div
-      ref={refView}
       style={{
         minHeight: height,
         maxHeight: height,
@@ -47,6 +59,7 @@ export default function Cover(props) {
         flexDirection: "column",
         flex: 1,
       }}
+      ref={refView}
     >
       <div
         style={{
