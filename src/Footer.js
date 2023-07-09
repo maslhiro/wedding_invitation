@@ -44,13 +44,9 @@ export default function Footer(props) {
           }}
           href="tel:0978702268"
         >
-          <div className="txt-letter-01">Liên hệ chú rễ</div>
+          <div className="txt-letter-01">Liên hệ chú rể</div>
           <br />
-          <img
-            src={phone_02}
-            alt="phone_02"
-            style={{ objectFit: "cover", height: 80, width: 80 }}
-          />
+          <img src={phone_02} alt="phone_02" className="icon-phone" />
         </a>
         <a
           style={{
@@ -61,15 +57,11 @@ export default function Footer(props) {
             alignItems: "center",
             textDecoration: "none",
           }}
-          href="tel:0978702268"
+          href="tel:0967381931"
         >
           <div className="txt-letter-01">Liên hệ cô dâu</div>
           <br />
-          <img
-            src={phone_01}
-            alt="phone_01"
-            style={{ objectFit: "cover", height: 80, width: 80 }}
-          />
+          <img src={phone_01} alt="phone_01" className="icon-phone" />
         </a>
       </div>
       <br />

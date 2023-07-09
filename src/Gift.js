@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext } from "react";
 import gift from "./assets/gift.png";
+import qr from "./assets/qr.jpg";
 import { MyContext } from "./store";
 import { BACKGROUND_COLOR } from "./assets";
 
-const LINK_QR =
-  "https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png?format=300w";
+const LINK_RECEIVE_MONEY = "https://me.momo.vn/nhutvinh";
+
 export default function Gift(props) {
   const { store } = useContext(MyContext);
 
@@ -51,7 +52,7 @@ export default function Gift(props) {
         <a
           className="txt-letter-momo"
           target="_blank"
-          href={LINK_QR}
+          href={LINK_RECEIVE_MONEY}
           rel="noreferrer"
         >
           Gửi lời chúc qua Momo
@@ -61,10 +62,14 @@ export default function Gift(props) {
         <a
           className="txt-letter-momo"
           target="_blank"
-          href={LINK_QR}
+          href={LINK_RECEIVE_MONEY}
           rel="noreferrer"
         >
-          <img src={LINK_QR} alt="qr-code" />
+          <img
+            src={qr}
+            alt="qr-code"
+            style={{ objectFit: "cover", width: "70%" }}
+          />
         </a>
         <br />
       </div>
@@ -80,7 +85,7 @@ export default function Gift(props) {
       <br />
 
       <div className="txt-letter-01">Trần Hồng Hạnh</div>
-      <div className="txt-letter-01">Vietcombank - xxxxxxxxx</div>
+      <div className="txt-letter-01">Vietcombank - 0381000547691</div>
 
       <br />
       <div className="txt-letter-01">-------------------------------</div>

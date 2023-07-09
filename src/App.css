@@ -7,6 +7,23 @@
   background-color: #f1e0cd;
 }
 
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.icon-image {
+  width: 50px;
+}
+
+.icon-phone {
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+}
+
 .title-loading {
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
@@ -75,6 +92,74 @@
   text-align: center;
 }
 
+.form__input {
+  font-family: "Josefin Sans", sans-serif;
+  color: #333;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 0.3rem solid transparent;
+  border: none;
+  width: 70%;
+  display: block;
+}
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #9c1e22;
+  border: none;
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+
+  padding: 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #9c1e22;
+}
+
+.button-3:focus {
+  box-shadow: rgba(156, 30, 34, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: rgba(20, 70, 32, 0.2);
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #9c1e22;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
 @media (max-width: 520px) {
   .title-loading {
     font-family: "Josefin Sans", sans-serif;
@@ -138,6 +223,58 @@
     line-height: 8vw;
     color: #ae3225;
     text-align: center;
+  }
+
+  .icon-image {
+    width: 10vw;
+  }
+
+  .icon-phone {
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .form__input {
+    font-family: "Josefin Sans", sans-serif;
+    color: #333;
+    font-size: 4vw;
+    line-height: 5.6vw;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 0.3rem solid transparent;
+    border: none;
+    width: 70%;
+    display: block;
+  }
+
+  .button-3 {
+    appearance: none;
+    background-color: #9c1e22;
+    border: none;
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Josefin Sans", sans-serif;
+
+    font-size: 4vw;
+    line-height: 5.6vw;
+    font-weight: 600;
+
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
   }
 }
 
