@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import feedback from "./assets/feedback.png";
 import { MyContext } from "./store";
+import { BACKGROUND_COLOR } from "./assets";
 
 export default function Feedback(props) {
   const { store } = useContext(MyContext);
@@ -17,6 +18,8 @@ export default function Feedback(props) {
         display: "flex",
         flexDirection: "column",
         flex: 1,
+        backgroundColor: BACKGROUND_COLOR,
+
         // alignItems: "center",
         // justifyContent: "center",
       }}

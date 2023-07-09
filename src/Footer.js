@@ -5,6 +5,7 @@ import footer from "./assets/footer.png";
 import phone_01 from "./assets/phone_01.png";
 import phone_02 from "./assets/phone_02.png";
 import { MyContext } from "./store";
+import { BACKGROUND_COLOR } from "./assets";
 
 export default function Footer(props) {
   const { store } = useContext(MyContext);
@@ -20,6 +21,7 @@ export default function Footer(props) {
         display: "flex",
         flexDirection: "column",
         flex: 1,
+        backgroundColor: BACKGROUND_COLOR,
       }}
     >
       <img

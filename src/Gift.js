@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import gift from "./assets/gift.png";
 import { MyContext } from "./store";
+import { BACKGROUND_COLOR } from "./assets";
 
 const LINK_QR =
   "https://images.squarespace-cdn.com/content/v1/5d3f241fa4e0350001fa20d5/1636491460338-AIZAXV2978MGIDQE0GT7/qr-code.png?format=300w";
@@ -19,6 +20,8 @@ export default function Gift(props) {
         display: "flex",
         flexDirection: "column",
         flex: 1,
+        backgroundColor: BACKGROUND_COLOR,
+
         // alignItems: "center",
         // justifyContent: "center",
       }}
