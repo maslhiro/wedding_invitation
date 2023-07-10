@@ -56,6 +56,7 @@ export default function Feedback(props) {
       comp,
       status,
       num,
+      txt: `${name}-${comp}-${status}-${num}`,
     });
     setSubmited(true);
   };
