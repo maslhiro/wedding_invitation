@@ -133,17 +133,11 @@ export default function Letter02(props) {
         </div>
         <div
           style={{
-            flex: 1,
+            flex: 2,
             display: "flex",
             backgroundColor: "red",
           }}
-        >
-          {/* <div className="txt-letter-01">
-            Sự hiện diện của Quý Khách
-            <br />
-            là niềm vinh dự cho gia đình chúng tôi.
-          </div> */}
-        </div>
+        />
       </div>
     </Letter>
   );
