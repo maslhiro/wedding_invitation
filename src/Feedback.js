@@ -20,7 +20,7 @@ const COMP = {
 const STATUS = {
   CONFIRM: "confirm",
   DISMISS: "dismiss",
-  CONFUSED: "Confused",
+  CONFUSED: "confused",
 };
 
 export default function Feedback(props) {
@@ -51,7 +51,7 @@ export default function Feedback(props) {
   };
 
   const onSubmit = () => {
-    va.track("Invation", {
+    va.track("Invations", {
       name,
       comp,
       status,
