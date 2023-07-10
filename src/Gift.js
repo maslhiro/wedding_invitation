@@ -55,10 +55,11 @@ export default function Gift(props) {
           href={LINK_RECEIVE_MONEY}
           rel="noreferrer"
         >
-          Gửi lời chúc qua Momo
+          Nhấn vào đây
+          <br />
+          để gửi lời chúc qua Momo
         </a>
         <br />
-
         <a
           className="txt-letter-momo"
           target="_blank"
@@ -78,7 +79,7 @@ export default function Gift(props) {
       <div className="txt-letter-01">-------------------------------</div>
 
       <div className="txt-letter-01">Lê Nhựt Vinh</div>
-      <div className="txt-letter-01">Vietcombank - 997870226 - niv</div>
+      <div className="txt-letter-01">Vietcombank - 997870226</div>
       <br />
 
       <div className="txt-letter-01">-------------------------------</div>
