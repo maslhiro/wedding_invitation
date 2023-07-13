@@ -79,7 +79,7 @@ export default function Gift(props) {
       <div className="txt-letter-01">-------------------------------</div>
 
       <div className="txt-letter-01">Lê Nhựt Vinh</div>
-      <div className="txt-letter-01">Vietcombank - 997870226</div>
+      <div className="txt-letter-01">Vietcombank - 9978702268</div>
       <br />
 
       <div className="txt-letter-01">-------------------------------</div>
