@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import gift from "./assets/gift.png";
 import qr from "./assets/qr.jpg";
+import qr_vcb from "./assets/qr_vcb.jpg";
 import { MyContext } from "./store";
 import { BACKGROUND_COLOR } from "./assets";
 
@@ -87,7 +88,12 @@ export default function Gift(props) {
 
       <div className="txt-letter-01">Trần Hồng Hạnh</div>
       <div className="txt-letter-01">Vietcombank - 0381000547691</div>
-
+      <br />
+      <img
+        src={qr_vcb}
+        alt="qr-vcb-code"
+        style={{ objectFit: "cover", width: "80%", alignSelf: "center" }}
+      />
       <br />
       <div className="txt-letter-01">-------------------------------</div>
     </div>
